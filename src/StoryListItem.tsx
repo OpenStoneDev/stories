@@ -107,8 +107,8 @@ export const StoryListItem = (props: Props) => {
     startAnimation();
   }
 
-  function startAnimation(duration) {
-    const time = content[current].type.startsWith("video") ? duration : 10000
+  function startAnimation() {
+    const time = content[current].type.startsWith("video") ? props.duration : 10000
     Animated.timing(progress, {
       toValue: 1,
       duration: time,
